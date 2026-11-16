@@ -1,0 +1,66 @@
+#api call for create user
+###
+POST http://127.0.0.1:8000/user/register/
+Content-Type: application/json
+
+{
+  "username":"user1",
+  "email":"user1@gmail.com",
+  "password":"user1@123"
+}
+
+
+#api call for list
+###
+GET http://127.0.0.1:8000/foodlog/
+Accept: application/json
+Authorization: Basic user1:user1@123
+
+#api call for post
+###
+POST http://127.0.0.1:8000/foodlog/
+Content-Type: application/json
+Authorization: Basic user1:user1@123
+
+{
+ "title":"biriyani",
+ "calories":"600",
+ "meal_type":"lunch",
+ "serving_size":" quater",
+ "owner":"Saavan"
+
+
+
+}
+
+#api call for retrive
+###
+GET http://127.0.0.1:8000/foodlog/1/
+Accept: application/json
+Authorization: Basic user1:user1@123
+
+
+#api call for update
+###
+PUT http://127.0.0.1:8000/foodlog/3/
+Content-Type: application/json
+Authorization: Basic user1:user1@123
+
+{
+    "id": 3,
+    "title": "Mandhi",
+    "calories": "600",
+    "meal_type": "lunch",
+    "serving_size": "full",
+    "created_at": "2026-10-15T10:18:51.986912Z",
+    "owner": "Saavan"
+}
+
+
+#api call for deleting
+###
+DELETE http://127.0.0.1:8000/foodlog/4/
+Content-Type: application/json
+Authorization: Basic user1:user1@123
+
+
